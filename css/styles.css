@@ -53,6 +53,21 @@ ul {
   padding-bottom: 24px;
 }
 
+.current {
+  position: relative;
+}
+
+.current::after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  width:100%;
+  background-color: #404BBF;
+  left: 0;
+  bottom: -1px;
+  border-radius: 2px;
+}
+
 .addr-stl {
   margin-left: auto;
 }
@@ -73,22 +88,11 @@ ul {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)),
       url(../images/img-hero.jpg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 1440px;
 }
 
-/*
-.hero {
-    background-image: linear-gradient(to bottom,
-        rgba(46, 47, 66, 0.7),
-        rgba(46, 47, 66, 0.7)),
-      url(../images/img-hero.jpg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-}
-*/
 .section {
   padding: 120px 0;
 }
@@ -99,34 +103,36 @@ ul {
 
 .h-hided {
   display: flex;
+  flex-basis: calc((100% - 24px * 3) / 4);
   align-items: baseline;
+  justify-content: center;
   gap: 24px;
 } 
 
 .hh-item {
-  flex-basis: calc((100% - 24px * 3) / 4);
   margin: 0 auto;
-    justify-content: center;
 }
 
 .hh-icon-block {
+  display: flex;
   height: 112px;
   background-color: #F4F4FD;
   border: 1px solid #8e8f99;
   border-radius: 4px;
   margin-bottom: 8px;
+  justify-content: center;
+  align-items: center;
 }
 
 .hh-icon {
-  width: 40px;
-  height: 40px;
-  background-color: #ffffff;
+  background-color: #F4F4FD;
+}
+.hh-itemh {
+  margin-bottom: 8px;
 }
 
-.hh-itemh,
-.oth,
-.otp {
-  margin-bottom: 8px;
+.ot-hdr {
+  margin-bottom: 72px;
 }
 
 .ot-list {
@@ -134,6 +140,20 @@ ul {
   align-items: baseline;
   flex-basis: calc((100% - 24px * 3) / 4);
   gap: 24px;
+}
+
+.otm-item {
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 3px 3px 0px #d0d1d9;
+}
+
+.ot-nmpstn {
+  padding: 32px 0;
+}
+
+.oth,
+.otp {
+  margin-bottom: 8px;
 }
 
 .social-links {
@@ -152,6 +172,8 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-link-item:hover {
@@ -162,15 +184,6 @@ ul {
   fill: #ffffff;
 }
 
-.ot-nmpstn {
-padding: 32px 0;
-}
-
-.otm-item {
-  border-radius: 0px 0px 4px 4px;
-}
-
-.ot-hdr,
 .oprtf-hdr {
   margin-bottom: 72px;
 }
@@ -184,11 +197,52 @@ padding: 32px 0;
   column-gap: 24px;
 }
 
+.prtf-wrap-cover {
+  position: relative;
+  overflow: hidden;
+}
+
+.oprtf-item {
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.oprtf-item:hover {
+  box-shadow: 0px 3px 3px 0px #d0d1d9;
+}
+
+.oprtf-item:hover .prtf-detail {
+  transform: translateY(0);
+}
+
+.prtf-detail {
+  position: absolute;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  text-align: left;
+  font-style: normal;
+  top: 0;
+  left: 0;
+  padding: 32px;
+  background-color: #4D5AE5;
+  color: #F4F4FD;
+  height: 100%;
+  transform: translateY(100%);
+  transition: transform 300ms linear;
+}
+
 .prtf-crd {
   padding: 32px 16px;
   border-right:  1px solid #E7E9FC;
   border-bottom: 1px solid #E7E9FC;
   border-left: 1px solid #E7E9FC;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.prtf-crd:hover {
+    box-shadow: 0px 3px 3px 0px #d0d1d9;
 }
 
 img {
@@ -259,6 +313,8 @@ img {
   letter-spacing: 0.01em;
   text-align: left;
   font-style: normal;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .ro-reg-left .rrl-item:hover,
 .ro-reg-left .rrl-item:focus {
@@ -362,6 +418,8 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .ftr-icon:hover {
@@ -404,6 +462,8 @@ img {
   min-width: 169px;
   height: 56px;
   border: none;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .btn:hover,
 .btn:focus {
