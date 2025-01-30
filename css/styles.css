@@ -83,6 +83,7 @@ ul {
 }
 
 .section-hr {
+  max-width: 1440px;
   padding: 188px 0;
   background-image: linear-gradient(to bottom,
         rgba(46, 47, 66, 0.7),
@@ -90,7 +91,8 @@ ul {
       url(../images/img-hero.jpg);
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 1440px;
+  background-size: cover;
+  margin: 0 auto;
 }
 
 .section {
@@ -229,7 +231,7 @@ ul {
   color: #F4F4FD;
   height: 100%;
   transform: translateY(100%);
-  transition: transform 300ms linear;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .prtf-crd {
@@ -237,12 +239,15 @@ ul {
   border-right:  1px solid #E7E9FC;
   border-bottom: 1px solid #E7E9FC;
   border-left: 1px solid #E7E9FC;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  /*transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);*/
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .prtf-crd:hover {
-    box-shadow: 0px 3px 3px 0px #d0d1d9;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+      0px 1px 1px rgba(46, 47, 66, 0.16),
+      0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 img {
@@ -462,7 +467,7 @@ img {
   min-width: 169px;
   height: 56px;
   border: none;
-  transition-duration: 250ms;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .btn:hover,
