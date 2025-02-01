@@ -33,10 +33,11 @@ ul {
               0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
-.hdr-cntn,
-.nav {
+
+.nav,
+.hdr-cntn {
   display: flex;
-  align-items: center;
+  align-items: baseline;
 }
 
 .navy-blue {
@@ -84,6 +85,7 @@ ul {
     letter-spacing: 0.02em;
     text-align: left;
 }----*/
+
 .hdr-nv-itm {
   padding-top: 24px;
   padding-bottom: 24px;
@@ -404,7 +406,7 @@ img {
   padding: 100px 0;
 }
 
-.ftr {
+.container .ftr {
   display: flex;
   display: inline-block;
   align-items: baseline;
