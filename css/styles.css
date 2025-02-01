@@ -406,7 +406,7 @@ img {
   padding: 100px 0;
 }
 
-.container .ftr {
+.ftr {
   display: flex;
   display: inline-block;
   align-items: baseline;
